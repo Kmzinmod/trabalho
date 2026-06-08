@@ -3,96 +3,122 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Samba - PatrimÃ´nio Cultural Brasileiro</title>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<title>Samba - Patrimônio Cultural Brasileiro</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
 <style>
-*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif}
-body{background:#0d1117;color:white}
-.hero{height:100vh;background:linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.6)),url('https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=1600');background-size:cover;background-position:center;display:flex;justify-content:center;align-items:center;text-align:center;padding:20px}
-.hero h1{font-size:5rem;color:#ffd700}
-.hero p{font-size:1.3rem;margin-top:15px}
-.btn{display:inline-block;margin-top:25px;padding:15px 35px;background:#ffd700;color:black;text-decoration:none;font-weight:bold;border-radius:40px}
-.container{width:90%;max-width:1200px;margin:auto;padding:60px 0}
-.card{background:#161b22;padding:30px;border-radius:20px;margin-bottom:30px;box-shadow:0 0 20px rgba(255,215,0,.15)}
-.card h2{color:#ffd700;margin-bottom:15px}
-.card p,.card li{line-height:1.8}
-.galeria{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px;margin-top:20px}
-.galeria img{width:100%;height:250px;object-fit:cover;border-radius:15px}
+*{margin:0;padding:0;box-sizing:border-box;font-family:Poppins,sans-serif}
+body{background:linear-gradient(180deg,#0b1220,#111827);color:#fff}
+.hero{min-height:100vh;display:flex;align-items:center;justify-content:center;text-align:center;padding:40px;background:linear-gradient(rgba(0,0,0,.65),rgba(0,0,0,.65)),url('https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=1600') center/cover}
+.hero h1{font-size:clamp(3rem,8vw,6rem);color:#ffd700}
+.hero p{font-size:1.2rem;margin:15px 0}
+.btn{display:inline-block;padding:15px 30px;background:#ffd700;color:#000;text-decoration:none;border-radius:50px;font-weight:700}
+.container{max-width:1200px;margin:auto;padding:50px 20px}
+.card{background:#1b2433;border-radius:20px;padding:30px;margin-bottom:25px;box-shadow:0 10px 30px rgba(0,0,0,.3)}
+h2{color:#ffd700;margin-bottom:15px}
+p,li{line-height:1.9}
+.fala{margin-top:20px;background:#253246;padding:20px;border-left:5px solid #ffd700;border-radius:12px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:15px}
+.grid img{width:100%;height:220px;object-fit:cover;border-radius:15px}
 .timeline{border-left:4px solid #ffd700;padding-left:20px}
-.timeline div{margin-bottom:20px}
-.fala{background:#21262d;padding:20px;margin-top:20px;border-left:5px solid #ffd700;border-radius:10px}
-.video{position:relative;padding-bottom:56.25%;height:0;overflow:hidden;border-radius:15px}
-.video iframe{position:absolute;top:0;left:0;width:100%;height:100%;border:none}
-footer{text-align:center;padding:30px;background:black}
+.timeline div{margin:15px 0}
+.video-link{display:inline-block;margin-top:15px;padding:12px 20px;background:#ff0000;color:#fff;text-decoration:none;border-radius:10px}
+footer{text-align:center;padding:30px;background:#000}
 </style>
 </head>
 <body>
+
 <section class="hero">
 <div>
-<h1>ðŸŽ¶ SAMBA</h1>
-<p>PatrimÃ´nio Cultural Brasileiro</p>
-<a href="#historia" class="btn">Conhecer</a>
+<h1>🎶 SAMBA</h1>
+<p>Patrimônio Cultural Brasileiro e um dos maiores símbolos da cultura brasileira</p>
+<a href="#conteudo" class="btn">Explorar Trabalho</a>
 </div>
 </section>
 
-<div class="container">
-<div class="card" id="historia">
-<h2>ðŸ“– HistÃ³ria do Samba</h2>
-<p>O samba surgiu no Rio de Janeiro no final do sÃ©culo XIX, influenciado pelas tradiÃ§Ãµes africanas trazidas pelos povos escravizados. Com o passar dos anos tornou-se um dos maiores sÃ­mbolos culturais do Brasil.</p>
-<p>Em 2008, foi reconhecido pela UNESCO como patrimÃ´nio cultural imaterial. Atualmente estÃ¡ presente em festas populares, rodas de samba, escolas de samba e no Carnaval.</p>
-<div class="fala"><b>Pessoa 1:</b><br><br>O samba nasceu da mistura das culturas africana, europeia e indÃ­gena. Surgiu no Rio de Janeiro e se tornou uma das manifestaÃ§Ãµes culturais mais importantes do Brasil.</div>
+<div class="container" id="conteudo">
+
+<div class="card">
+<h2>📖 Origem e História do Samba</h2>
+<p>O samba surgiu no Rio de Janeiro no final do século XIX, influenciado pelas tradições musicais africanas trazidas pelos povos escravizados. Com o passar do tempo, incorporou elementos de outras culturas e tornou-se uma das manifestações artísticas mais importantes do Brasil.</p>
+<p>Hoje, o samba representa alegria, resistência cultural, criatividade e união. Está presente em rodas de samba, festas populares, apresentações culturais e principalmente no Carnaval.</p>
+
+<div class="fala">
+<b>Pessoa 1 – Fala:</b><br><br>
+O samba é uma das maiores manifestações culturais do Brasil. Ele surgiu no Rio de Janeiro no final do século XIX a partir da mistura das culturas africana, europeia e indígena. Sua importância é tão grande que foi reconhecido mundialmente e se tornou um símbolo da identidade brasileira.
+</div>
 </div>
 
 <div class="card">
-<h2>ðŸ¥ Instrumentos do Samba</h2>
+<h2>🥁 Características Musicais</h2>
 <ul>
-<li>Surdo</li><li>Pandeiro</li><li>Cavaquinho</li><li>ViolÃ£o</li><li>Tamborim</li><li>Reco-reco</li><li>CuÃ­ca</li><li>AgogÃ´</li>
+<li>Compasso musical de 2/4.</li>
+<li>Ritmo forte, alegre e contagiante.</li>
+<li>Presença marcante da percussão.</li>
+<li>Letras que falam sobre amor, saudade, alegria e cotidiano.</li>
+<li>Diversos estilos, como samba-enredo, samba-canção, partido alto e samba de roda.</li>
 </ul>
-<div class="fala"><b>Pessoa 2:</b><br><br>O samba possui ritmo forte e contagiante. Seus instrumentos produzem uma sonoridade Ãºnica e existem vÃ¡rios estilos como samba-enredo, samba de roda e partido alto.</div>
+
+<div class="fala">
+<b>Pessoa 2 – Fala:</b><br><br>
+O samba possui um ritmo forte e envolvente. Entre os instrumentos mais utilizados estão o surdo, o pandeiro, o cavaquinho, o tamborim, o reco-reco e o violão. Suas letras retratam sentimentos e situações do dia a dia, tornando esse gênero musical muito próximo da população.
+</div>
 </div>
 
 <div class="card">
-<h2>ðŸ’ƒ Como DanÃ§ar Samba</h2>
+<h2>🎵 Principais Instrumentos</h2>
+<ul>
+<li>Surdo</li>
+<li>Pandeiro</li>
+<li>Cavaquinho</li>
+<li>Violão</li>
+<li>Tamborim</li>
+<li>Reco-reco</li>
+<li>Cuíca</li>
+<li>Agogô</li>
+</ul>
+</div>
+
+<div class="card">
+<h2>💃 Como Dançar Samba</h2>
 <ol>
-<li>Fique com o corpo relaxado.</li>
-<li>DÃª pequenos passos para os lados.</li>
+<li>Fique com os pés afastados e o corpo relaxado.</li>
+<li>Dê pequenos passos para os lados.</li>
 <li>Acompanhe a batida do surdo.</li>
-<li>Movimente o quadril naturalmente.</li>
-<li>FaÃ§a giros leves.</li>
-<li>Divirta-se.</li>
+<li>Mantenha os movimentos leves e naturais.</li>
+<li>Faça giros suaves quando estiver confortável.</li>
+<li>Divirta-se e siga o ritmo da música.</li>
 </ol>
-<div class="fala"><b>Pessoa 3:</b><br><br>Para danÃ§ar samba Ã© importante sentir a mÃºsica e acompanhar o ritmo dos instrumentos com passos leves e naturais.</div>
+
+<div class="fala">
+<b>Pessoa 3 – Fala:</b><br><br>
+Para dançar samba é importante ouvir a música e acompanhar o ritmo. Os passos básicos são simples e consistem em movimentos leves para os lados. O mais importante é manter a naturalidade e aproveitar a dança.
+</div>
 </div>
 
 <div class="card">
-<h2>ðŸ“… Linha do Tempo</h2>
+<h2>📅 Linha do Tempo do Samba</h2>
 <div class="timeline">
-<div><b>Final do SÃ©culo XIX</b><br>Surgimento do samba.</div>
-<div><b>1917</b><br>"Pelo Telefone", considerado o primeiro samba gravado.</div>
-<div><b>1930</b><br>PopularizaÃ§Ã£o das escolas de samba.</div>
-<div><b>2008</b><br>Reconhecimento pela UNESCO.</div>
+<div><b>Final do Século XIX:</b> Surgimento do samba no Rio de Janeiro.</div>
+<div><b>1917:</b> Gravação de "Pelo Telefone", considerado o primeiro samba gravado.</div>
+<div><b>Década de 1930:</b> Crescimento das escolas de samba.</div>
+<div><b>2008:</b> Reconhecimento internacional pela UNESCO.</div>
 </div>
 </div>
 
 <div class="card">
-<h2>ðŸ¤” Curiosidades</h2>
-<ul>
-<li>O samba Ã© um dos maiores sÃ­mbolos culturais do Brasil.</li>
-<li>O Carnaval do Rio Ã© famoso mundialmente pelos desfiles de samba.</li>
-<li>Existem diversas variaÃ§Ãµes do samba em diferentes regiÃµes do paÃ­s.</li>
-</ul>
+<h2>🤔 Curiosidades</h2>
+<p>O samba é conhecido mundialmente e atrai turistas de vários países para o Carnaval brasileiro. Existem dezenas de variações regionais e ele continua evoluindo até os dias atuais.</p>
 </div>
 
 <div class="card">
-<h2>ðŸŽ¥ VÃ­deo Explicativo</h2>
-<div class="video">
-<iframe src="https://www.youtube.com/embed/qfpjR3uR6jI" allowfullscreen></iframe>
-</div>
+<h2>🎥 Vídeo para Complementar a Pesquisa</h2>
+<p>Se o vídeo incorporado não funcionar em alguns navegadores ou escolas, utilize o botão abaixo para abrir diretamente no YouTube:</p>
+<a class="video-link" href="https://www.youtube.com/results?search_query=historia+do+samba" target="_blank">Assistir Vídeo sobre a História do Samba</a>
 </div>
 
 <div class="card">
-<h2>ðŸ–¼ï¸ Galeria</h2>
-<div class="galeria">
+<h2>🖼️ Galeria</h2>
+<div class="grid">
 <img src="https://images.unsplash.com/photo-1506157786151-b8491531f063?w=1000">
 <img src="https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=1000">
 <img src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=1000">
@@ -101,14 +127,16 @@ footer{text-align:center;padding:30px;background:black}
 </div>
 
 <div class="card">
-<h2>ðŸ† ConclusÃ£o</h2>
-<p>O samba representa a histÃ³ria, a cultura e a diversidade do Brasil, sendo reconhecido mundialmente como um dos maiores sÃ­mbolos do paÃ­s.</p>
+<h2>🏆 Conclusão</h2>
+<p>O samba é muito mais do que um gênero musical. Ele representa a história, a cultura e a diversidade do povo brasileiro. Sua influência ultrapassa fronteiras e continua encantando pessoas em todo o mundo, preservando tradições e fortalecendo a identidade nacional.</p>
 </div>
+
 </div>
 
 <footer>
-<h3>ðŸŽ¶ Trabalho Escolar sobre Samba</h3>
-<p>PatrimÃ´nio Cultural Brasileiro ðŸ‡§ðŸ‡·</p>
+<h3>🎶 Trabalho Escolar - Samba</h3>
+<p>Patrimônio Cultural Brasileiro 🇧🇷</p>
 </footer>
+
 </body>
 </html>
