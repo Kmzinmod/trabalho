@@ -3,208 +3,112 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Samba - Patrimônio Cultural Brasileiro</title>
-
+<title>Samba - PatrimÃ´nio Cultural Brasileiro</title>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-
 <style>
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:'Poppins',sans-serif;
-}
-
-body{
-    background:linear-gradient(135deg,#0f2027,#203a43,#2c5364);
-    color:white;
-}
-
-.hero{
-    min-height:100vh;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    text-align:center;
-    padding:40px;
-}
-
-.hero-content{
-    max-width:800px;
-}
-
-.hero h1{
-    font-size:4rem;
-    margin-bottom:15px;
-}
-
-.hero p{
-    font-size:1.2rem;
-    opacity:0.9;
-}
-
-.btn{
-    display:inline-block;
-    margin-top:25px;
-    padding:15px 35px;
-    background:#ffd700;
-    color:black;
-    text-decoration:none;
-    border-radius:50px;
-    font-weight:bold;
-    transition:0.3s;
-}
-
-.btn:hover{
-    transform:scale(1.05);
-}
-
-.container{
-    width:90%;
-    max-width:1200px;
-    margin:auto;
-    padding:60px 0;
-}
-
-.card{
-    background:rgba(255,255,255,0.08);
-    backdrop-filter:blur(10px);
-    border-radius:20px;
-    padding:30px;
-    margin-bottom:30px;
-    box-shadow:0 10px 25px rgba(0,0,0,0.3);
-}
-
-.card h2{
-    color:#ffd700;
-    margin-bottom:15px;
-}
-
-.card p,
-.card li{
-    line-height:1.8;
-}
-
-.fala{
-    margin-top:20px;
-    padding:20px;
-    border-left:5px solid #ffd700;
-    background:rgba(255,255,255,0.05);
-    border-radius:10px;
-}
-
-.steps{
-    padding-left:20px;
-}
-
-footer{
-    text-align:center;
-    padding:30px;
-    background:rgba(0,0,0,0.3);
-}
-
-footer p{
-    opacity:0.8;
-}
-
-html{
-    scroll-behavior:smooth;
-}
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif}
+body{background:#0d1117;color:white}
+.hero{height:100vh;background:linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.6)),url('https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=1600');background-size:cover;background-position:center;display:flex;justify-content:center;align-items:center;text-align:center;padding:20px}
+.hero h1{font-size:5rem;color:#ffd700}
+.hero p{font-size:1.3rem;margin-top:15px}
+.btn{display:inline-block;margin-top:25px;padding:15px 35px;background:#ffd700;color:black;text-decoration:none;font-weight:bold;border-radius:40px}
+.container{width:90%;max-width:1200px;margin:auto;padding:60px 0}
+.card{background:#161b22;padding:30px;border-radius:20px;margin-bottom:30px;box-shadow:0 0 20px rgba(255,215,0,.15)}
+.card h2{color:#ffd700;margin-bottom:15px}
+.card p,.card li{line-height:1.8}
+.galeria{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px;margin-top:20px}
+.galeria img{width:100%;height:250px;object-fit:cover;border-radius:15px}
+.timeline{border-left:4px solid #ffd700;padding-left:20px}
+.timeline div{margin-bottom:20px}
+.fala{background:#21262d;padding:20px;margin-top:20px;border-left:5px solid #ffd700;border-radius:10px}
+.video{position:relative;padding-bottom:56.25%;height:0;overflow:hidden;border-radius:15px}
+.video iframe{position:absolute;top:0;left:0;width:100%;height:100%;border:none}
+footer{text-align:center;padding:30px;background:black}
 </style>
 </head>
-
 <body>
-
 <section class="hero">
-    <div class="hero-content">
-        <h1>🎶 Samba</h1>
-        <p>Patrimônio Cultural Brasileiro</p>
-        <a href="#conteudo" class="btn">Ver Trabalho</a>
-    </div>
+<div>
+<h1>ðŸŽ¶ SAMBA</h1>
+<p>PatrimÃ´nio Cultural Brasileiro</p>
+<a href="#historia" class="btn">Conhecer</a>
+</div>
 </section>
 
-<div class="container" id="conteudo">
+<div class="container">
+<div class="card" id="historia">
+<h2>ðŸ“– HistÃ³ria do Samba</h2>
+<p>O samba surgiu no Rio de Janeiro no final do sÃ©culo XIX, influenciado pelas tradiÃ§Ãµes africanas trazidas pelos povos escravizados. Com o passar dos anos tornou-se um dos maiores sÃ­mbolos culturais do Brasil.</p>
+<p>Em 2008, foi reconhecido pela UNESCO como patrimÃ´nio cultural imaterial. Atualmente estÃ¡ presente em festas populares, rodas de samba, escolas de samba e no Carnaval.</p>
+<div class="fala"><b>Pessoa 1:</b><br><br>O samba nasceu da mistura das culturas africana, europeia e indÃ­gena. Surgiu no Rio de Janeiro e se tornou uma das manifestaÃ§Ãµes culturais mais importantes do Brasil.</div>
+</div>
 
-    <div class="card">
-        <h2>📌 Pessoa 1 – Origem do Samba</h2>
+<div class="card">
+<h2>ðŸ¥ Instrumentos do Samba</h2>
+<ul>
+<li>Surdo</li><li>Pandeiro</li><li>Cavaquinho</li><li>ViolÃ£o</li><li>Tamborim</li><li>Reco-reco</li><li>CuÃ­ca</li><li>AgogÃ´</li>
+</ul>
+<div class="fala"><b>Pessoa 2:</b><br><br>O samba possui ritmo forte e contagiante. Seus instrumentos produzem uma sonoridade Ãºnica e existem vÃ¡rios estilos como samba-enredo, samba de roda e partido alto.</div>
+</div>
 
-        <p>
-            O samba é uma das maiores manifestações culturais do Brasil,
-            surgido no Rio de Janeiro no final do século XIX.
-            Nasceu da mistura das culturas africana, europeia e indígena.
-            Em 2008 foi reconhecido pela UNESCO como Patrimônio Cultural Imaterial.
-            Além do Carnaval, está presente em rodas de samba, festas e encontros populares.
-        </p>
+<div class="card">
+<h2>ðŸ’ƒ Como DanÃ§ar Samba</h2>
+<ol>
+<li>Fique com o corpo relaxado.</li>
+<li>DÃª pequenos passos para os lados.</li>
+<li>Acompanhe a batida do surdo.</li>
+<li>Movimente o quadril naturalmente.</li>
+<li>FaÃ§a giros leves.</li>
+<li>Divirta-se.</li>
+</ol>
+<div class="fala"><b>Pessoa 3:</b><br><br>Para danÃ§ar samba Ã© importante sentir a mÃºsica e acompanhar o ritmo dos instrumentos com passos leves e naturais.</div>
+</div>
 
-        <div class="fala">
-            <strong>Fala da Pessoa 1:</strong><br><br>
+<div class="card">
+<h2>ðŸ“… Linha do Tempo</h2>
+<div class="timeline">
+<div><b>Final do SÃ©culo XIX</b><br>Surgimento do samba.</div>
+<div><b>1917</b><br>"Pelo Telefone", considerado o primeiro samba gravado.</div>
+<div><b>1930</b><br>PopularizaÃ§Ã£o das escolas de samba.</div>
+<div><b>2008</b><br>Reconhecimento pela UNESCO.</div>
+</div>
+</div>
 
-            O samba é uma das maiores manifestações culturais do Brasil.
-            Ele surgiu no Rio de Janeiro no final do século XIX, resultado da mistura
-            das culturas africana, europeia e indígena. Em 2008, foi reconhecido pela
-            UNESCO como patrimônio cultural imaterial. Além de ser símbolo do Carnaval,
-            faz parte da identidade cultural do povo brasileiro.
-        </div>
-    </div>
+<div class="card">
+<h2>ðŸ¤” Curiosidades</h2>
+<ul>
+<li>O samba Ã© um dos maiores sÃ­mbolos culturais do Brasil.</li>
+<li>O Carnaval do Rio Ã© famoso mundialmente pelos desfiles de samba.</li>
+<li>Existem diversas variaÃ§Ãµes do samba em diferentes regiÃµes do paÃ­s.</li>
+</ul>
+</div>
 
-    <div class="card">
-        <h2>🎵 Pessoa 2 – Características da Música</h2>
+<div class="card">
+<h2>ðŸŽ¥ VÃ­deo Explicativo</h2>
+<div class="video">
+<iframe src="https://www.youtube.com/embed/qfpjR3uR6jI" allowfullscreen></iframe>
+</div>
+</div>
 
-        <ul>
-            <li>Compasso de 2/4.</li>
-            <li>Ritmo forte e contagiante.</li>
-            <li>Instrumentos: surdo, pandeiro, cavaquinho, violão, tamborim e reco-reco.</li>
-            <li>Letras sobre amor, alegria, saudade e cotidiano.</li>
-            <li>Estilos: samba-enredo, samba de roda, partido alto e samba-canção.</li>
-        </ul>
+<div class="card">
+<h2>ðŸ–¼ï¸ Galeria</h2>
+<div class="galeria">
+<img src="https://images.unsplash.com/photo-1506157786151-b8491531f063?w=1000">
+<img src="https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=1000">
+<img src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=1000">
+<img src="https://images.unsplash.com/photo-1501386761578-eac5c94b800a?w=1000">
+</div>
+</div>
 
-        <div class="fala">
-            <strong>Fala da Pessoa 2:</strong><br><br>
-
-            O samba possui compasso de dois por quatro e um ritmo muito contagiante.
-            O surdo marca a batida principal e é acompanhado por instrumentos como
-            pandeiro, cavaquinho, violão, tamborim e reco-reco. As letras falam sobre
-            amor, saudade, alegria e situações do dia a dia.
-        </div>
-    </div>
-
-    <div class="card">
-        <h2>💃 Pessoa 3 – Como Dançar Samba</h2>
-
-        <ol class="steps">
-            <li>Fique com os pés afastados e o corpo relaxado.</li>
-            <li>Dê um passo pequeno para um lado.</li>
-            <li>Junte o outro pé.</li>
-            <li>Repita para o lado oposto.</li>
-            <li>Faça giros leves e acompanhe o ritmo.</li>
-            <li>Divirta-se enquanto dança.</li>
-        </ol>
-
-        <div class="fala">
-            <strong>Fala da Pessoa 3:</strong><br><br>
-
-            Para dançar samba, mantenha o corpo relaxado e acompanhe a batida da música.
-            O passo básico consiste em dar pequenos passos para os lados, juntando os pés
-            e repetindo o movimento. Também é possível fazer giros leves e movimentos
-            naturais do quadril.
-        </div>
-    </div>
-
-    <div class="card">
-        <h2>🏆 Conclusão</h2>
-
-        <p>
-            O samba representa a diversidade cultural brasileira e é uma das expressões
-            artísticas mais importantes do país. Sua música, dança e história continuam
-            encantando pessoas no Brasil e no mundo.
-        </p>
-    </div>
-
+<div class="card">
+<h2>ðŸ† ConclusÃ£o</h2>
+<p>O samba representa a histÃ³ria, a cultura e a diversidade do Brasil, sendo reconhecido mundialmente como um dos maiores sÃ­mbolos do paÃ­s.</p>
+</div>
 </div>
 
 <footer>
-    <p>Trabalho Escolar • Samba - Patrimônio Cultural Brasileiro 🇧🇷</p>
+<h3>ðŸŽ¶ Trabalho Escolar sobre Samba</h3>
+<p>PatrimÃ´nio Cultural Brasileiro ðŸ‡§ðŸ‡·</p>
 </footer>
-
 </body>
 </html>
