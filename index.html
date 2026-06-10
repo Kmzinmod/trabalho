@@ -3,140 +3,559 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Samba - Patrimônio Cultural Brasileiro</title>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+<title>Trabalhos Escolares - Menu</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 <style>
 *{margin:0;padding:0;box-sizing:border-box;font-family:Poppins,sans-serif}
-body{background:linear-gradient(180deg,#0b1220,#111827);color:#fff}
-.hero{min-height:100vh;display:flex;align-items:center;justify-content:center;text-align:center;padding:40px;background:linear-gradient(rgba(0,0,0,.65),rgba(0,0,0,.65)),url('https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=1600') center/cover}
-.hero h1{font-size:clamp(3rem,8vw,6rem);color:#ffd700}
-.hero p{font-size:1.2rem;margin:15px 0}
-.btn{display:inline-block;padding:15px 30px;background:#ffd700;color:#000;text-decoration:none;border-radius:50px;font-weight:700}
-.container{max-width:1200px;margin:auto;padding:50px 20px}
-.card{background:#1b2433;border-radius:20px;padding:30px;margin-bottom:25px;box-shadow:0 10px 30px rgba(0,0,0,.3)}
-h2{color:#ffd700;margin-bottom:15px}
-p,li{line-height:1.9}
-.fala{margin-top:20px;background:#253246;padding:20px;border-left:5px solid #ffd700;border-radius:12px}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:15px}
-.grid img{width:100%;height:220px;object-fit:cover;border-radius:15px}
-.timeline{border-left:4px solid #ffd700;padding-left:20px}
-.timeline div{margin:15px 0}
-.video-link{display:inline-block;margin-top:15px;padding:12px 20px;background:#ff0000;color:#fff;text-decoration:none;border-radius:10px}
-footer{text-align:center;padding:30px;background:#000}
+body{background:#f4fff6;color:#222;overflow-x:hidden}
+html{scroll-behavior:smooth}
+
+/* MENU DE NAVEGAÇÃO PRINCIPAL */
+.menu-principal{
+position:fixed;top:0;left:0;right:0;
+background:linear-gradient(135deg, #ff6b35, #ff8c42);
+padding:20px;
+text-align:center;
+z-index:1000;
+box-shadow:0 4px 15px rgba(0,0,0,.1);
+}
+
+.menu-principal h1{
+color:white;
+font-size:1.8rem;
+margin-bottom:15px;
+text-shadow:2px 2px 4px rgba(0,0,0,.2);
+}
+
+.abas-container{
+display:flex;
+justify-content:center;
+gap:15px;
+flex-wrap:wrap;
+}
+
+.aba-btn{
+padding:12px 30px;
+border:none;
+background:white;
+color:#ff6b35;
+font-weight:bold;
+font-size:1.1rem;
+border-radius:25px;
+cursor:pointer;
+transition:all .3s ease;
+box-shadow:0 4px 10px rgba(0,0,0,.15);
+}
+
+.aba-btn:hover{
+transform:translateY(-3px);
+box-shadow:0 6px 20px rgba(0,0,0,.2);
+background:#ffe5cc;
+}
+
+.aba-btn.ativo{
+background:#0f5132;
+color:white;
+transform:scale(1.05);
+}
+
+body{
+margin-top:180px;
+}
+
+/* CONTEÚDO DAS ABAS */
+.conteudo-aba{
+display:none;
+}
+
+.conteudo-aba.ativo{
+display:block;
+animation:fadeIn .5s;
+}
+
+@keyframes fadeIn{
+from{opacity:0;transform:translateY(20px)}
+to{opacity:1;transform:translateY(0)}
+}
+
+/* ESTILOS BIOLOGIA */
+.hero{
+height:100vh;
+background:linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.55)),
+url('https://images.unsplash.com/photo-1441974231531-c6227db76b6e?q=80&w=1600') center/cover;
+display:flex;align-items:center;justify-content:center;text-align:center;color:white;
+margin-top:-180px;
+padding-top:180px;
+}
+
+.hero h1{font-size:4rem}
+.hero p{font-size:1.3rem;margin-top:15px}
+
+nav{
+position:sticky;top:180px;z-index:999;
+background:#0f5132;padding:15px;text-align:center
+}
+nav a{
+color:white;text-decoration:none;margin:0 15px;font-weight:bold;
+transition:.3s;
+}
+nav a:hover{
+text-decoration:underline;
+}
+
+section{padding:80px 10%}
+
+.card{
+background:white;border-radius:20px;padding:30px;
+box-shadow:0 10px 30px rgba(0,0,0,.12);
+transition:.4s
+}
+.card:hover{transform:translateY(-5px)}
+
+h2{
+color:#0f5132;
+margin-bottom:20px;
+font-size:2rem
+}
+
+.parallax{
+height:400px;
+background:url('https://images.unsplash.com/photo-1470770841072-f978cf4d019e?q=80&w=1600') center/cover fixed;
+}
+
+.stats{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:20px
+}
+.stat{
+background:linear-gradient(135deg,#198754,#14532d);
+color:white;
+padding:30px;
+border-radius:18px;
+text-align:center
+}
+.stat h3{font-size:2rem}
+
+.timeline{
+position:relative;
+padding-left:40px
+}
+.timeline::before{
+content:'';
+position:absolute;
+left:12px;top:0;bottom:0;
+width:4px;background:#198754
+}
+.timeline-item{
+position:relative;margin-bottom:30px
+}
+.timeline-item::before{
+content:'';
+position:absolute;
+left:-35px;top:8px;
+width:18px;height:18px;
+background:#198754;border-radius:50%
+}
+
+.gallery{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px
+}
+.gallery img{
+width:100%;height:250px;
+object-fit:cover;border-radius:18px;
+transition:.4s
+}
+.gallery img:hover{
+transform:scale(1.05)
+}
+
+.people{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:20px
+}
+
+.person{
+background:#eaf9ef;
+padding:20px;
+border-radius:15px
+}
+
+iframe{
+width:100%;
+height:550px;
+border:none;
+border-radius:20px
+}
+
+footer{
+background:#0f5132;
+color:white;
+text-align:center;
+padding:30px;
+margin-top:60px;
+}
+
+.fade{
+opacity:0;
+transform:translateY(40px);
+transition:1s
+}
+.show{
+opacity:1;
+transform:translateY(0)
+}
+
+/* ESTILOS EDUCAÇÃO FÍSICA */
+.hero-ef{
+height:100vh;
+background:linear-gradient(rgba(255, 107, 53, 0.6),rgba(255, 107, 53, 0.6)),
+url('https://images.unsplash.com/photo-1461896836934-ffe607ba8211?q=80&w=1600') center/cover;
+display:flex;align-items:center;justify-content:center;text-align:center;color:white;
+margin-top:-180px;
+padding-top:180px;
+}
+
+.hero-ef h1{font-size:4rem}
+.hero-ef p{font-size:1.3rem;margin-top:15px}
+
+.nav-ef{
+position:sticky;top:180px;z-index:999;
+background:#d9500e;padding:15px;text-align:center
+}
+
+.nav-ef a{
+color:white;text-decoration:none;margin:0 15px;font-weight:bold;
+transition:.3s;
+}
+
+.nav-ef a:hover{
+text-decoration:underline;
+}
+
+.card-ef{
+background:linear-gradient(135deg, #fff5f0, #ffe5d9);
+border-left:5px solid #ff6b35;
+}
+
+.card-ef h2{
+color:#ff6b35;
+}
+
+.stat-ef{
+background:linear-gradient(135deg, #ff6b35, #ff8c42);
+}
+
+.person-ef{
+background:#ffe5cc;
+border-left:4px solid #ff6b35;
+}
+
+.esporte-card{
+background:white;
+border-radius:15px;
+padding:20px;
+margin:15px 0;
+border-left:5px solid #ff6b35;
+box-shadow:0 5px 15px rgba(255,107,53,.15);
+}
+
+.esporte-card h3{
+color:#ff6b35;
+margin-bottom:10px;
+font-size:1.5rem;
+}
+
+.esporte-card p{
+line-height:1.6;
+color:#333;
+}
+
+@media(max-width:768px){
+.hero h1{font-size:2.4rem}
+.hero-ef h1{font-size:2.4rem}
+.people{grid-template-columns:1fr}
+.abas-container{flex-direction:column}
+.aba-btn{width:100%}
+}
 </style>
 </head>
 <body>
 
-<section class="hero">
+<!-- MENU PRINCIPAL -->
+<div class="menu-principal">
+<h1>📚 Meus Trabalhos Escolares</h1>
+<div class="abas-container">
+<button class="aba-btn ativo" onclick="mostrarAba('biologia')">🔬 Biologia</button>
+<button class="aba-btn" onclick="mostrarAba('educacao-fisica')">⚽ Educação Física</button>
+</div>
+</div>
+
+<!-- ===== CONTEÚDO BIOLOGIA ===== -->
+<div id="biologia" class="conteudo-aba ativo">
+
+<div class="hero">
 <div>
-<h1>🎶 SAMBA</h1>
-<p>Patrimônio Cultural Brasileiro e um dos maiores símbolos da cultura brasileira</p>
-<a href="#conteudo" class="btn">Explorar Trabalho</a>
+<h1>Área de Relevância e Interesse Biológico</h1>
+<p>Protegendo a biodiversidade e garantindo o futuro do planeta.</p>
+</div>
+</div>
+
+<nav>
+<a href="#intro">Introdução</a>
+<a href="#importancia">Importância</a>
+<a href="#timeline">Timeline</a>
+<a href="#curiosidades">Curiosidades</a>
+<a href="#apresentacao">Apresentação</a>
+<a href="#video">Vídeo</a>
+</nav>
+
+<section id="intro" class="fade">
+<div class="card">
+<h2>O que são?</h2>
+<p>As Áreas de Relevância e Interesse Biológico são regiões que apresentam grande importância ambiental devido à sua biodiversidade, recursos naturais ou presença de espécies ameaçadas. Elas desempenham um papel fundamental na preservação dos ecossistemas e na manutenção do equilíbrio ambiental.</p>
+<br>
+<p>Essas áreas são protegidas para garantir a sobrevivência de animais, plantas e outros organismos que dependem desses ambientes para viver.</p>
 </div>
 </section>
 
-<div class="container" id="conteudo">
+<div class="parallax"></div>
 
+<section id="importancia" class="fade">
+<h2>Importância Ambiental</h2>
+<div class="stats">
+<div class="stat"><h3>+8 Milhões</h3><p>Espécies estimadas no planeta.</p></div>
+<div class="stat"><h3>70%</h3><p>Da água doce depende de ecossistemas preservados.</p></div>
+<div class="stat"><h3>30%</h3><p>Meta global de áreas protegidas.</p></div>
+<div class="stat"><h3>100%</h3><p>Essenciais para o futuro da humanidade.</p></div>
+</div>
+</section>
+
+<section id="timeline" class="fade">
 <div class="card">
-<h2>📖 Origem e História do Samba</h2>
-<p>O samba surgiu no Rio de Janeiro no final do século XIX, influenciado pelas tradições musicais africanas trazidas pelos povos escravizados. Com o passar do tempo, incorporou elementos de outras culturas e tornou-se uma das manifestações artísticas mais importantes do Brasil.</p>
-<p>Hoje, o samba representa alegria, resistência cultural, criatividade e união. Está presente em rodas de samba, festas populares, apresentações culturais e principalmente no Carnaval.</p>
-
-<div class="fala">
-<b>Pessoa 1 – Fala:</b><br><br>
-O samba é uma das maiores manifestações culturais do Brasil. Ele surgiu no Rio de Janeiro no final do século XIX a partir da mistura das culturas africana, europeia e indígena. Sua importância é tão grande que foi reconhecido mundialmente e se tornou um símbolo da identidade brasileira.
-</div>
-</div>
-
-<div class="card">
-<h2>🥁 Características Musicais</h2>
-<ul>
-<li>Compasso musical de 2/4.</li>
-<li>Ritmo forte, alegre e contagiante.</li>
-<li>Presença marcante da percussão.</li>
-<li>Letras que falam sobre amor, saudade, alegria e cotidiano.</li>
-<li>Diversos estilos, como samba-enredo, samba-canção, partido alto e samba de roda.</li>
-</ul>
-
-<div class="fala">
-<b>Pessoa 2 – Fala:</b><br><br>
-O samba possui um ritmo forte e envolvente. Entre os instrumentos mais utilizados estão o surdo, o pandeiro, o cavaquinho, o tamborim, o reco-reco e o violão. Suas letras retratam sentimentos e situações do dia a dia, tornando esse gênero musical muito próximo da população.
-</div>
-</div>
-
-<div class="card">
-<h2>🎵 Principais Instrumentos</h2>
-<ul>
-<li>Surdo</li>
-<li>Pandeiro</li>
-<li>Cavaquinho</li>
-<li>Violão</li>
-<li>Tamborim</li>
-<li>Reco-reco</li>
-<li>Cuíca</li>
-<li>Agogô</li>
-</ul>
-</div>
-
-<div class="card">
-<h2>💃 Como Dançar Samba</h2>
-<ol>
-<li>Fique com os pés afastados e o corpo relaxado.</li>
-<li>Dê pequenos passos para os lados.</li>
-<li>Acompanhe a batida do surdo.</li>
-<li>Mantenha os movimentos leves e naturais.</li>
-<li>Faça giros suaves quando estiver confortável.</li>
-<li>Divirta-se e siga o ritmo da música.</li>
-</ol>
-
-<div class="fala">
-<b>Pessoa 3 – Fala:</b><br><br>
-Para dançar samba é importante ouvir a música e acompanhar o ritmo. Os passos básicos são simples e consistem em movimentos leves para os lados. O mais importante é manter a naturalidade e aproveitar a dança.
-</div>
-</div>
-
-<div class="card">
-<h2>📅 Linha do Tempo do Samba</h2>
+<h2>Linha do Tempo</h2>
 <div class="timeline">
-<div><b>Final do Século XIX:</b> Surgimento do samba no Rio de Janeiro.</div>
-<div><b>1917:</b> Gravação de "Pelo Telefone", considerado o primeiro samba gravado.</div>
-<div><b>Década de 1930:</b> Crescimento das escolas de samba.</div>
-<div><b>2008:</b> Reconhecimento internacional pela UNESCO.</div>
+<div class="timeline-item"><b>1972</b> - Conferência de Estocolmo inicia debates ambientais globais.</div>
+<div class="timeline-item"><b>1992</b> - ECO-92 fortalece ações de preservação ambiental.</div>
+<div class="timeline-item"><b>2000</b> - Expansão de unidades de conservação em vários países.</div>
+<div class="timeline-item"><b>2015</b> - Objetivos de Desenvolvimento Sustentável ganham destaque.</div>
+<div class="timeline-item"><b>Hoje</b> - Crescem projetos de conservação da biodiversidade.</div>
 </div>
 </div>
+</section>
 
+<section id="curiosidades" class="fade">
 <div class="card">
-<h2>🤔 Curiosidades</h2>
-<p>O samba é conhecido mundialmente e atrai turistas de vários países para o Carnaval brasileiro. Existem dezenas de variações regionais e ele continua evoluindo até os dias atuais.</p>
+<h2>Curiosidades</h2>
+<p>🌳 Uma floresta tropical pode conter mais espécies por hectare do que muitos países inteiros.</p><br>
+<p>🦜 Cientistas descobrem novas espécies todos os anos.</p><br>
+<p>🐝 Grande parte dos alimentos depende da polinização realizada por insetos.</p><br>
+<p>💧 Áreas preservadas ajudam a evitar secas e enchentes.</p><br>
+<p>🌍 A biodiversidade é considerada um dos maiores patrimônios naturais da Terra.</p>
+</div>
+</section>
+
+<section class="fade">
+<h2>Galeria</h2>
+<div class="gallery">
+<img src="https://images.unsplash.com/photo-1425913397330-cf8af2ff40a1?q=80&w=1200">
+<img src="https://images.unsplash.com/photo-1470770841072-f978cf4d019e?q=80&w=1200">
+<img src="https://images.unsplash.com/photo-1448375240586-882707db888b?q=80&w=1200">
+<img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=80&w=1200">
+</div>
+</section>
+
+<section id="apresentacao" class="fade">
+<h2>Roteiro para 2 Pessoas</h2>
+<div class="people">
+<div class="person">
+<h3>Pessoa 1</h3>
+<p>Bom dia a todos. Hoje vamos apresentar o tema Área de Relevância e Interesse Biológico.</p>
+<p>Essas áreas são fundamentais para a proteção da biodiversidade e dos recursos naturais.</p>
+<p>Além disso, elas ajudam na conservação da água, do solo e dos ecossistemas.</p>
 </div>
 
+<div class="person">
+<h3>Pessoa 2</h3>
+<p>Essas regiões também são importantes para pesquisas científicas e educação ambiental.</p>
+<p>A preservação dessas áreas contribui para reduzir impactos ambientais e proteger espécies ameaçadas.</p>
+<p>Por isso, devemos valorizar e preservar o meio ambiente.</p>
+</div>
+</div>
+</section>
+
+<section id="video" class="fade">
 <div class="card">
-<h2>🎥 Vídeo para Complementar a Pesquisa</h2>
-<p>Se o vídeo incorporado não funcionar em alguns navegadores ou escolas, utilize o botão abaixo para abrir diretamente no YouTube:</p>
-<a class="video-link" href="https://www.youtube.com/results?search_query=historia+do+samba" target="_blank">Assistir Vídeo sobre a História do Samba</a>
+<h2>Vídeo Explicativo</h2>
+<iframe src="https://www.youtube.com/embed/1Vq9nL8Qm0I" allowfullscreen></iframe>
 </div>
+</section>
 
+<section class="fade">
 <div class="card">
-<h2>🖼️ Galeria</h2>
-<div class="grid">
-<img src="https://images.unsplash.com/photo-1506157786151-b8491531f063?w=1000">
-<img src="https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=1000">
-<img src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=1000">
-<img src="https://images.unsplash.com/photo-1501386761578-eac5c94b800a?w=1000">
+<h2>Conclusão</h2>
+<p>As Áreas de Relevância e Interesse Biológico são essenciais para a manutenção da vida na Terra. Proteger esses espaços significa garantir um futuro sustentável para as próximas gerações, preservando a biodiversidade, os recursos naturais e o equilíbrio dos ecossistemas.</p>
 </div>
-</div>
-
-<div class="card">
-<h2>🏆 Conclusão</h2>
-<p>O samba é muito mais do que um gênero musical. Ele representa a história, a cultura e a diversidade do povo brasileiro. Sua influência ultrapassa fronteiras e continua encantando pessoas em todo o mundo, preservando tradições e fortalecendo a identidade nacional.</p>
-</div>
-
-</div>
+</section>
 
 <footer>
-<h3>🎶 Trabalho Escolar - Samba</h3>
-<p>Patrimônio Cultural Brasileiro 🇧🇷</p>
+Trabalho Escolar • Área de Relevância e Interesse Biológico • 2026
 </footer>
+
+</div>
+
+<!-- ===== CONTEÚDO EDUCAÇÃO FÍSICA ===== -->
+<div id="educacao-fisica" class="conteudo-aba">
+
+<div class="hero-ef">
+<div>
+<h1>Educação Física e Saúde</h1>
+<p>Desenvolvendo hábitos saudáveis e atividades físicas para uma vida plena.</p>
+</div>
+</div>
+
+<div class="nav-ef">
+<a href="#conceito-ef">Conceito</a>
+<a href="#beneficios">Benefícios</a>
+<a href="#esportes">Esportes</a>
+<a href="#saude">Saúde</a>
+<a href="#roteiro-ef">Roteiro</a>
+</div>
+
+<section id="conceito-ef" class="fade">
+<div class="card card-ef">
+<h2>O que é Educação Física?</h2>
+<p>A Educação Física é uma disciplina que contribui para a formação integral do aluno, promovendo conhecimentos sobre o corpo, movimento, exercício físico e sua relação com a saúde e o bem-estar.</p>
+<br>
+<p>Ela não se limita apenas ao ensino de esportes, mas engloba a consciência corporal, o desenvolvimento motor, a socialização e a adoção de hábitos saudáveis que perduram por toda a vida.</p>
+</div>
+</section>
+
+<section id="beneficios" class="fade">
+<h2 style="color:#ff6b35;">Benefícios da Atividade Física</h2>
+<div class="stats">
+<div class="stat-ef"><h3>❤️ Saúde</h3><p>Fortalece o coração, pulmões e músculos.</p></div>
+<div class="stat-ef"><h3>🧠 Mental</h3><p>Reduz estresse, ansiedade e melhora o humor.</p></div>
+<div class="stat-ef"><h3>👥 Social</h3><p>Promove integração, amizades e trabalho em equipe.</p></div>
+<div class="stat-ef"><h3>⚡ Energia</h3><p>Aumenta a disposição e a qualidade do sono.</p></div>
+</div>
+</section>
+
+<section id="esportes" class="fade">
+<h2 style="color:#ff6b35;">Principais Esportes</h2>
+
+<div class="esporte-card">
+<h3>⚽ Futebol</h3>
+<p>Um dos esportes mais populares do mundo. Desenvolve coordenação, velocidade, resistência e trabalho em equipe. Pode ser praticado de forma recreativa ou competitiva.</p>
+</div>
+
+<div class="esporte-card">
+<h3>🏀 Basquete</h3>
+<p>Esporte de equipe que melhora a agilidade, precisão e estratégia. Excelente para o desenvolvimento cardiovascular e habilidades motoras.</p>
+</div>
+
+<div class="esporte-card">
+<h3>🏐 Vôlei</h3>
+<p>Promove coordenação motora e força nos membros superiores. Muito utilizado em escolas para desenvolver a socialização e o respeito às regras.</p>
+</div>
+
+<div class="esporte-card">
+<h3>🏃 Atletismo</h3>
+<p>Compreende corridas, saltos e arremessos. Desenvolve resistência, velocidade e disposição física. Fundamental para a aptidão cardiovascular.</p>
+</div>
+
+<div class="esporte-card">
+<h3>🏊 Natação</h3>
+<p>Exercício completo que trabalha todos os grupos musculares. Excelente para pessoas com problemas articulares e muito eficaz para o condicionamento físico.</p>
+</div>
+
+<div class="esporte-card">
+<h3>🚴 Ciclismo</h3>
+<p>Atividade de baixo impacto que fortalece pernas e melhora a resistência cardiovascular. Pode ser praticada ao ar livre ou em ambientes controlados.</p>
+</div>
+
+</section>
+
+<section id="saude" class="fade">
+<div class="card card-ef">
+<h2>Hábitos Saudáveis</h2>
+<p><strong>🥗 Alimentação Balanceada:</strong> Consumir frutas, verduras, proteínas e carboidratos complexos.</p>
+<br>
+<p><strong>💤 Sono Adequado:</strong> Dormir entre 7 e 9 horas por noite para recuperação do corpo.</p>
+<br>
+<p><strong>💧 Hidratação:</strong> Beber água regularmente, especialmente durante a prática de exercícios.</p>
+<br>
+<p><strong>🏋️ Exercício Regular:</strong> Praticar atividade física pelo menos 30 minutos por dia.</p>
+<br>
+<p><strong>😊 Bem-estar Mental:</strong> Cuidar da saúde emocional, evitando estresse excessivo.</p>
+</div>
+</section>
+
+<section id="roteiro-ef" class="fade">
+<h2 style="color:#ff6b35;">Roteiro para Apresentação</h2>
+<div class="people">
+<div class="person-ef">
+<h3>👨 Apresentador 1</h3>
+<p>Olá a todos! Hoje vamos falar sobre Educação Física e sua importância na nossa vida.</p>
+<p>A educação física não é apenas sobre esportes, mas sobre desenvolver hábitos saudáveis que nos acompanham por toda a vida.</p>
+<p>A prática regular de atividades físicas melhora nossa saúde, aumenta nossa disposição e nos ajuda a ter uma vida mais feliz.</p>
+</div>
+
+<div class="person-ef">
+<h3>👩 Apresentadora 2</h3>
+<p>Além dos benefícios físicos, a educação física promove integração social, amizades e o trabalho em equipe.</p>
+<p>Através dos esportes, aprendemos valores importantes como respeito, disciplina e superação.</p>
+<p>Convidamos todos a participarem de atividades físicas e adotarem um estilo de vida mais saudável!</p>
+</div>
+</div>
+</section>
+
+<footer style="background:#d9500e;">
+Trabalho Escolar • Educação Física e Saúde • 2026
+</footer>
+
+</div>
+
+<script>
+// Função para trocar de aba
+function mostrarAba(nomeAba) {
+  // Esconde todas as abas
+  const abas = document.querySelectorAll('.conteudo-aba');
+  abas.forEach(aba => aba.classList.remove('ativo'));
+  
+  // Remove classe ativa de todos os botões
+  const botoes = document.querySelectorAll('.aba-btn');
+  botoes.forEach(btn => btn.classList.remove('ativo'));
+  
+  // Mostra a aba clicada
+  document.getElementById(nomeAba).classList.add('ativo');
+  
+  // Marca o botão como ativo
+  event.target.classList.add('ativo');
+  
+  // Scroll para o topo
+  window.scrollTo(0, 0);
+  
+  // Reinicia a animação fade
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if(entry.isIntersecting) entry.target.classList.add('show');
+    });
+  });
+  document.querySelectorAll('.fade').forEach(el => observer.observe(el));
+}
+
+// Animação fade ao carregar
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if(entry.isIntersecting) entry.target.classList.add('show');
+  });
+});
+document.querySelectorAll('.fade').forEach(el => observer.observe(el));
+</script>
 
 </body>
 </html>
