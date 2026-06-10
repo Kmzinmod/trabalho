@@ -227,12 +227,12 @@ position:sticky;top:180px;z-index:999;
 background:#d9500e;padding:15px;text-align:center
 }
 
-.nav-ef a{
-color:white;text-decoration:none;margin:0 15px;font-weight:bold;
-transition:.3s;
+.nav-ef button{
+color:white;background:none;border:none;margin:0 15px;font-weight:bold;
+transition:.3s;cursor:pointer;font-size:1rem;padding:0;
 }
 
-.nav-ef a:hover{
+.nav-ef button:hover{
 text-decoration:underline;
 }
 
@@ -274,24 +274,105 @@ line-height:1.6;
 color:#333;
 }
 
-.samba-link-btn{
-display:inline-block;
-padding:15px 40px;
-background:linear-gradient(135deg, #ffd700, #ff8c00);
-color:#000;
-text-decoration:none;
-border-radius:25px;
-font-weight:bold;
-font-size:1.1rem;
-margin:20px 0;
-transition:all .3s ease;
-box-shadow:0 5px 15px rgba(255,107,53,.3);
+/* ESTILOS SAMBA */
+.samba-section{
+background:linear-gradient(180deg, #0b1220, #111827);
+color:#fff;
+padding:80px 10%;
 }
 
-.samba-link-btn:hover{
-transform:translateY(-3px);
-box-shadow:0 8px 25px rgba(255,107,53,.5);
-background:linear-gradient(135deg, #ff8c00, #ffd700);
+.samba-section h2{
+color:#ffd700;
+text-align:center;
+font-size:2.5rem;
+margin-bottom:40px;
+}
+
+.samba-card{
+background:#1b2433;
+border-radius:20px;
+padding:30px;
+margin:20px 0;
+box-shadow:0 10px 30px rgba(0,0,0,.3);
+border-left:4px solid #ffd700;
+color:#fff;
+}
+
+.samba-card h3{
+color:#ffd700;
+margin-top:20px;
+margin-bottom:10px;
+font-size:1.5rem;
+}
+
+.samba-card p, .samba-card li{
+line-height:1.9;
+font-size:1rem;
+}
+
+.samba-card ul, .samba-card ol{
+margin-left:25px;
+margin-top:15px;
+}
+
+.samba-card li{
+margin-bottom:10px;
+}
+
+.samba-fala{
+margin-top:20px;
+background:#253246;
+padding:20px;
+border-left:5px solid #ffd700;
+border-radius:12px;
+font-style:italic;
+font-size:0.95rem;
+}
+
+.samba-fala b{
+color:#ffd700;
+display:block;
+margin-bottom:10px;
+font-style:normal;
+}
+
+.samba-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:15px;
+margin-top:20px;
+}
+
+.samba-grid img{
+width:100%;
+height:220px;
+object-fit:cover;
+border-radius:15px;
+transition:transform .3s;
+}
+
+.samba-grid img:hover{
+transform:scale(1.05);
+}
+
+.samba-timeline{
+border-left:4px solid #ffd700;
+padding-left:20px;
+margin-top:15px;
+}
+
+.samba-timeline div{
+margin:20px 0;
+padding-bottom:15px;
+border-bottom:1px solid #253246;
+}
+
+.samba-timeline div:last-child{
+border-bottom:none;
+}
+
+.samba-timeline b{
+color:#ffd700;
 }
 
 @media(max-width:768px){
@@ -300,6 +381,7 @@ background:linear-gradient(135deg, #ff8c00, #ffd700);
 .people{grid-template-columns:1fr}
 .abas-container{flex-direction:column}
 .aba-btn{width:100%}
+.nav-ef button{display:block;margin:10px 0}
 }
 </style>
 </head>
@@ -433,20 +515,20 @@ Trabalho Escolar • Área de Relevância e Interesse Biológico • 2026
 <div class="hero-ef">
 <div>
 <h1>Educação Física e Saúde</h1>
-<p>Desenvolvendo h��bitos saudáveis e atividades físicas para uma vida plena.</p>
+<p>Desenvolvendo hábitos saudáveis e atividades físicas para uma vida plena.</p>
 </div>
 </div>
 
 <div class="nav-ef">
-<a href="#conceito-ef">Conceito</a>
-<a href="#beneficios">Benefícios</a>
-<a href="#esportes">Esportes</a>
-<a href="#saude">Saúde</a>
-<a href="#roteiro-ef">Roteiro</a>
-<a href="educação física/samba.html" target="_blank">🎶 Samba</a>
+<button onclick="mostrarSecaoEF('conceito-ef')">Conceito</button>
+<button onclick="mostrarSecaoEF('beneficios')">Benefícios</button>
+<button onclick="mostrarSecaoEF('esportes')">Esportes</button>
+<button onclick="mostrarSecaoEF('saude')">Saúde</button>
+<button onclick="mostrarSecaoEF('roteiro-ef')">Roteiro</button>
+<button onclick="mostrarSecaoEF('samba-content')">🎶 Samba</button>
 </div>
 
-<section id="conceito-ef" class="fade">
+<section id="conceito-ef" class="fade" style="display:block">
 <div class="card card-ef">
 <h2>O que é Educação Física?</h2>
 <p>A Educação Física é uma disciplina que contribui para a formação integral do aluno, promovendo conhecimentos sobre o corpo, movimento, exercício físico e sua relação com a saúde e o[...]
@@ -455,7 +537,7 @@ Trabalho Escolar • Área de Relevância e Interesse Biológico • 2026
 </div>
 </section>
 
-<section id="beneficios" class="fade">
+<section id="beneficios" class="fade" style="display:none">
 <h2 style="color:#ff6b35;">Benefícios da Atividade Física</h2>
 <div class="stats">
 <div class="stat-ef"><h3>❤️ Saúde</h3><p>Fortalece o coração, pulmões e músculos.</p></div>
@@ -465,7 +547,7 @@ Trabalho Escolar • Área de Relevância e Interesse Biológico • 2026
 </div>
 </section>
 
-<section id="esportes" class="fade">
+<section id="esportes" class="fade" style="display:none">
 <h2 style="color:#ff6b35;">Principais Esportes</h2>
 
 <div class="esporte-card">
@@ -500,16 +582,7 @@ Trabalho Escolar • Área de Relevância e Interesse Biológico • 2026
 
 </section>
 
-<section id="samba-intro" class="fade">
-<div class="card card-ef">
-<h2>🎶 Samba - Cultura e Dança</h2>
-<p>O samba é muito mais do que um gênero musical. Ele representa a história, a cultura e a diversidade do povo brasileiro, conectando dança e expressão física com a herança cultural.</p>
-<p>Explore a história completa do samba, aprenda como dançar e descubra os instrumentos tradicionais:</p>
-<a href="educação física/samba.html" class="samba-link-btn" target="_blank">📖 Explorar Trabalho Sobre Samba</a>
-</div>
-</section>
-
-<section id="saude" class="fade">
+<section id="saude" class="fade" style="display:none">
 <div class="card card-ef">
 <h2>Hábitos Saudáveis</h2>
 <p><strong>🥗 Alimentação Balanceada:</strong> Consumir frutas, verduras, proteínas e carboidratos complexos.</p>
@@ -524,7 +597,7 @@ Trabalho Escolar • Área de Relevância e Interesse Biológico • 2026
 </div>
 </section>
 
-<section id="roteiro-ef" class="fade">
+<section id="roteiro-ef" class="fade" style="display:none">
 <h2 style="color:#ff6b35;">Roteiro para Apresentação</h2>
 <div class="people">
 <div class="person-ef">
@@ -543,6 +616,129 @@ Trabalho Escolar • Área de Relevância e Interesse Biológico • 2026
 </div>
 </section>
 
+<!-- ===== SEÇÃO SAMBA ===== -->
+<section id="samba-content" class="samba-section fade" style="display:none">
+
+<h2>🎶 SAMBA - Patrimônio Cultural Brasileiro</h2>
+
+<div class="samba-card">
+<h3>📖 Origem e História do Samba</h3>
+<p>O samba surgiu no Rio de Janeiro no final do século XIX, influenciado pelas tradições musicais africanas trazidas pelos povos escravizados. Com o passar do tempo, incorporou elementos de outras culturas e tornou-se uma das manifestações artísticas mais importantes do Brasil.</p>
+<p>Hoje, o samba representa alegria, resistência cultural, criatividade e união. Está presente em rodas de samba, festas populares, apresentações culturais e principalmente no Carnaval.</p>
+
+<div class="samba-fala">
+<b>👤 Pessoa 1 – Fala:</b>
+O samba é uma das maiores manifestações culturais do Brasil. Ele surgiu no Rio de Janeiro no final do século XIX a partir da mistura das culturas africana, europeia e indígena. Sua importância é tão grande que foi reconhecido mundialmente e se tornou um símbolo da identidade brasileira.
+</div>
+</div>
+
+<div class="samba-card">
+<h3>🥁 Características Musicais</h3>
+<ul>
+<li><strong>Compasso musical:</strong> 2/4</li>
+<li><strong>Ritmo:</strong> Forte, alegre e contagiante</li>
+<li><strong>Percussão:</strong> Presença marcante</li>
+<li><strong>Letras:</strong> Falam sobre amor, saudade, alegria e cotidiano</li>
+<li><strong>Estilos:</strong> Samba-enredo, samba-canção, partido alto e samba de roda</li>
+</ul>
+
+<div class="samba-fala">
+<b>👤 Pessoa 2 – Fala:</b>
+O samba possui um ritmo forte e envolvente. Entre os instrumentos mais utilizados estão o surdo, o pandeiro, o cavaquinho, o tamborim, o reco-reco e o violão. Suas letras retratam sentimentos e situações do dia a dia, tornando esse gênero musical muito próximo da população.
+</div>
+</div>
+
+<div class="samba-card">
+<h3>🎵 Principais Instrumentos</h3>
+<ul>
+<li><strong>Surdo:</strong> O instrumento principal que marca o ritmo</li>
+<li><strong>Pandeiro:</strong> Percussão aguda e versátil</li>
+<li><strong>Cavaquinho:</strong> Instrumento de corda de som agudo</li>
+<li><strong>Violão:</strong> Harmonia e acompanhamento</li>
+<li><strong>Tamborim:</strong> Ritmo acelerado</li>
+<li><strong>Reco-reco:</strong> Som de atrito</li>
+<li><strong>Cuíca:</strong> Som característico único</li>
+<li><strong>Agogô:</strong> Instrumento de percussão duplo</li>
+</ul>
+</div>
+
+<div class="samba-card">
+<h3>💃 Como Dançar Samba</h3>
+<ol>
+<li>Fique com os pés afastados (aproximadamente largura dos ombros) e o corpo relaxado</li>
+<li>Dê pequenos passos para os lados, seguindo o ritmo</li>
+<li>Acompanhe a batida do surdo (o ritmo principal)</li>
+<li>Mantenha os movimentos leves e naturais</li>
+<li>Faça giros suaves quando estiver confortável</li>
+<li>Divirta-se e siga o ritmo da música</li>
+</ol>
+
+<h3>Dicas Importantes:</h3>
+<ul>
+<li>O movimento principal está nos quadris e pernas</li>
+<li>Não tense o corpo, deixe fluir naturalmente</li>
+<li>Practice com a música para pegar o ritmo</li>
+<li>Cada pessoa dança ao seu jeito - não há forma "correta"</li>
+</ul>
+
+<div class="samba-fala">
+<b>👤 Pessoa 3 – Fala:</b>
+Para dançar samba é importante ouvir a música e acompanhar o ritmo. Os passos básicos são simples e consistem em movimentos leves para os lados. O mais importante é manter a naturalidade e aproveitar a dança.
+</div>
+</div>
+
+<div class="samba-card">
+<h3>📅 Linha do Tempo do Samba</h3>
+<div class="samba-timeline">
+<div>
+<b>Final do Século XIX:</b> 
+<p>Surgimento do samba no Rio de Janeiro, nos arredores da zona portuária e nas comunidades afro-brasileiras.</p>
+</div>
+<div>
+<b>1917:</b> 
+<p>Gravação de "Pelo Telefone", considerado o primeiro samba gravado. Uma obra revolucionária para o gênero.</p>
+</div>
+<div>
+<b>Década de 1930:</b> 
+<p>Crescimento das escolas de samba e consolidação do samba como fenômeno cultural de massa.</p>
+</div>
+<div>
+<b>2008:</b> 
+<p>Reconhecimento internacional pela UNESCO como Patrimônio Cultural Imaterial da Humanidade.</p>
+</div>
+</div>
+</div>
+
+<div class="samba-card">
+<h3>🤔 Curiosidades</h3>
+<ul>
+<li>O samba é conhecido mundialmente e atrai turistas de vários países para o Carnaval brasileiro</li>
+<li>Existem dezenas de variações regionais do samba em todo o Brasil</li>
+<li>O samba continua evoluindo e incorporando influências contemporâneas</li>
+<li>Cada escola de samba cria um samba-enredo diferente a cada ano para o Carnaval</li>
+<li>A dança do samba foi influenciada por danças africanas trazidas durante o período escravocrata</li>
+<li>O samba é considerado resistência cultural e símbolo de identidade brasileira</li>
+</ul>
+</div>
+
+<div class="samba-card">
+<h3>🖼️ Galeria</h3>
+<div class="samba-grid">
+<img src="https://images.unsplash.com/photo-1506157786151-b8491531f063?w=1000" alt="Dança de Samba 1">
+<img src="https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=1000" alt="Carnaval">
+<img src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=1000" alt="Dança de Samba 2">
+<img src="https://images.unsplash.com/photo-1501386761578-eac5c94b800a?w=1000" alt="Apresentação">
+</div>
+</div>
+
+<div class="samba-card">
+<h3>🏆 Conclusão</h3>
+<p>O samba é muito mais do que um gênero musical. Ele representa a história, a cultura e a diversidade do povo brasileiro. Sua influência ultrapassa fronteiras e continua encantando pessoas em todo o mundo, preservando tradições e fortalecendo a identidade nacional.</p>
+<p style="margin-top:15px">A dança e a música do samba são expressões vivas da riqueza cultural do Brasil, mantendo viva a memória dos antepassados e conectando as gerações presentes e futuras a essa herança invalorável.</p>
+</div>
+
+</section>
+
 <footer style="background:#d9500e;">
 Trabalho Escolar • Educação Física e Saúde • 2026
 </footer>
@@ -550,32 +746,39 @@ Trabalho Escolar • Educação Física e Saúde • 2026
 </div>
 
 <script>
-// Função para trocar de aba
+// Função para trocar de aba principal
 function mostrarAba(nomeAba) {
-  // Esconde todas as abas
   const abas = document.querySelectorAll('.conteudo-aba');
   abas.forEach(aba => aba.classList.remove('ativo'));
   
-  // Remove classe ativa de todos os botões
   const botoes = document.querySelectorAll('.aba-btn');
   botoes.forEach(btn => btn.classList.remove('ativo'));
   
-  // Mostra a aba clicada
   document.getElementById(nomeAba).classList.add('ativo');
-  
-  // Marca o botão como ativo
   event.target.classList.add('ativo');
   
-  // Scroll para o topo
   window.scrollTo(0, 0);
   
-  // Reinicia a animação fade
   const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
       if(entry.isIntersecting) entry.target.classList.add('show');
     });
   });
   document.querySelectorAll('.fade').forEach(el => observer.observe(el));
+}
+
+// Função para mostrar seções da Educação Física
+function mostrarSecaoEF(idSecao) {
+  const secoes = document.querySelectorAll('#educacao-fisica section[id]');
+  secoes.forEach(secao => {
+    secao.style.display = 'none';
+  });
+  
+  const secao = document.getElementById(idSecao);
+  if(secao) {
+    secao.style.display = 'block';
+    window.scrollTo(0, secao.offsetTop - 200);
+  }
 }
 
 // Animação fade ao carregar
